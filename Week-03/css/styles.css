@@ -1,32 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Alice&family=Dancing+Script&family=Montserrat&family=PT+Serif&family=Poppins:wght@200;400&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Dancing+Script&family=Montserrat&family=PT+Serif&family=Poppins:wght@200;400&family=Roboto&display=swap");
 
 * {
-    margin: 0;
-    font-family: Roboto;
+  margin: 0;
+  font-family: Roboto;
 }
 
 header {
-    position: fixed;
-    background-color: #373867;
-    height: 117.92px;
-    width: 1512px;
+  position: fixed;
+  background-color: #373867;
+  height: 117.92px;
+  width: 1512px;
+  top: 0;
 }
 
 .headline {
-    margin: 0;
-    padding: 57px 0 13.92px 0;
-    text-align: center;
-    color: white;
-    font-size: 40px;
-    
+  margin: 0;
+  padding: 57px 0 13.92px 0;
+  text-align: center;
+  color: white;
+  font-size: 40px;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
+  font-size: 48px;
+  color: #373867;
+}
+
+li {
+  list-style: none;
 }
 
 aside {
-    position: fixed;
-    
-    left: 0;
+  width: 335px;
+  height: 982px;
+  position: fixed;
+  margin-top: 117.92px;
+  background-color: #f6f6f6;
+  left: 0;
+  top: 0;
+  display: inline-block;
+}
+
+aside ul {
+  margin-top: 68px;
+}
+
+.aside-btn {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  padding-top: 10px;
+  width: 238px;
+  height: 49px;
+  color: #2a2a32;
+  background-color: #aace9b;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.search-input {
+  width: 255px;
+  height: 36px;
+  left: 40px;
+  top: 16px;
+  border-radius: 4px;
+  position: absolute;
+}
+
+main {
+  margin-left: 335px;
+  margin-top: 117.92px;
+}
+
+footer {
+  margin-left: 335px;
 }
