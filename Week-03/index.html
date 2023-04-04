@@ -67,8 +67,6 @@
           </ul>
         </section>
       </navbar>
-
-      
     </aside>
 
     <main>
@@ -94,10 +92,10 @@
           Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.
         </p>
         <img
-        id="logo-radium"
-        src="../assets/img/LOGO-RR.png"
-        alt="Logo of Radium Rocket"
-      />
+          id="logo-radium"
+          src="../assets/img/LOGO-RR.png"
+          alt="Logo of Radium Rocket"
+        />
       </section>
 
       <div class="div-line"></div>
@@ -142,22 +140,39 @@
 
       <section>
         <h2>Regristration and/or claim</h2>
-        <form>
-          <label for="name">Name</label>
-          <input type="text" name="name" />
-          <label for="lastname">Lastname</label>
-          <input type="text" name="lastname" />
-          <label for="email">Email</label>
-          <input type="email" name="email" />
-          <input type="checkbox" name="costs" />
-          <label for="costs">I want to know memberships and costs</label>
-          <input type="checkbox" name="question" />
-          <label for="question">I want to make a question or suggestion</label>
-          <input type="checkbox" name="claim" />
-          <label for="claim">I want to make a claim</label>
-          <label for="comments">Comments</label>
-          <textarea name="comments" cols="30" rows="10"></textarea>
-          <button type="submit">Send</button>
+        <form action="">
+          <div class="form-fields">
+            <label for="name">Name</label> <br />
+            <input class="form-input" type="text" name="name" />
+          </div>
+          <div class="form-fields">
+            <label for="lastname">Lastname</label> <br />
+            <input class="form-input" type="text" name="lastname" />
+          </div>
+          <div class="form-fields">
+            <label for="email">Email</label> <br />
+            <input class="form-input" type="email" name="email" />
+          </div>
+          <div class="form-radio">
+            <input type="radio" id="costs" value="costs" name="comment" />
+            <label for="costs">I want to know memberships and costs</label>
+          </div>
+          <div class="form-radio">
+            <input type="radio" id="question" value="question" name="comment" />
+            <label for="question"
+              >I want to make a question or suggestion</label
+            >
+          </div>
+          <div class="form-radio">
+            <input type="radio" id="question" value="claim" name="comment" />
+            <label for="claim">I want to make a claim</label>
+          </div>
+          <div id="comments-field">
+            <label for="comments">Comments</label> <br />
+            <textarea name="comments" cols="30" rows="10"></textarea>
+          </div>
+
+          <button class="btn" type="submit">Send</button>
         </form>
       </section>
 
@@ -168,8 +183,9 @@
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when <br> an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+          since the 1500s, when <br />
+          an unknown printer took a galley of type and scrambled it to make a
+          type specimen book.
         </p>
       </section>
 
@@ -218,7 +234,9 @@
           <li>Grid display</li>
         </ul>
 
-        <h3 id="membership-only-classes" class="membership">Membership Only Classes</h3>
+        <h3 id="membership-only-classes" class="membership">
+          Membership Only Classes
+        </h3>
         <ul>
           <li>Personalized monitoring by a coach</li>
           <li>Grid display</li>
@@ -227,17 +245,30 @@
     </main>
 
     <footer>
-      <a href=""><img src="../assets/img/footer1.png" alt="Snapchat logo" /></a>
-      <a href=""><img src="../assets/img/footer2.png" alt="Whatsapp logo" /></a>
-      <a href=""><img src="../assets/img/footer3.png" alt="Facebook logo" /></a>
-      <a href=""
-        ><img src="../assets/img/footer4.png" alt="Instagram logo"
-      /></a>
-      <a href=""><img src="../assets/img/footer5.png" alt="Telegram logo" /></a>
-      <a href=""><img src="../assets/img/footer6.png" alt="LinkedIn logo" /></a>
-      <p>Rosario, Argentina</p>
-      <p>Copyright © 2022 Radium Rocket. All rights reserved.</p>
-
+      <div id="footer-social-media">
+        <a href="">
+          <img class="footer-logo" src="../assets/img/footer1.png" alt="Snapchat logo"/>
+        </a>
+        <a href="">
+          <img src="../assets/img/footer2.png" alt="Whatsapp logo"/>
+        </a>
+        <a href="">
+          <img class="footer-logo" src="../assets/img/footer3.png" alt="Facebook logo"/>
+        </a>
+        <a href="">
+          <img class="footer-logo" src="../assets/img/footer4.png" alt="Instagram logo"/>
+        </a>
+        <a href="">
+          <img class="footer-logo" src="../assets/img/footer5.png" alt="Telegram logo"/>
+        </a>
+        <a href="">
+          <img class="footer-logo" src="../assets/img/footer6.png" alt="LinkedIn logo"/>
+        </a>
+      </div>
+      <div id="footer-info">
+        <p>Rosario, Argentina</p>
+        <p>Copyright © 2022 Radium Rocket. All rights reserved.</p>
+      </div>
     </footer>
   </body>
 </html>

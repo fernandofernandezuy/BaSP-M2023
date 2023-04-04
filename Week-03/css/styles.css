@@ -187,6 +187,63 @@ h1 {
 }
 /* Info Section */
 
+/* Form */
+
+form {
+  margin: 0 400px 0 400px;
+ }
+ 
+ .form-fields {
+   font-weight: 700;
+   font-size: 13px;
+   text-align: center;
+ }
+ 
+ .form-radio {
+   margin: 30px 0 30px 0px;
+ }
+ 
+ 
+ .form-input {
+   height: 43px;
+   width: 386px;
+   background-color: #D9D9D9;
+   border: none;
+   margin: 10px 0 10px 0;
+ }
+ 
+ #comments-field textarea, #comments-field label, .btn {
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+ 
+ #comments-field label {
+   font-size: 13px;
+   font-weight: 700;
+   color: #2A2A32;
+ }
+ 
+ #comments-field textarea {
+   margin: 30px 0 30px 0;
+   width: 364px;
+   height: 171px;
+ }
+ 
+ .btn {
+   display: block;
+   margin: auto;
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 19px;
+   text-align: center;
+   background-color: #aace9b;
+   width: 109px;
+   height: 33px;
+   border: none;
+   border-radius: 5px;
+ }
+ 
+ /*Form*/
+
 /* About Us Section */
 #about-us-section p {
   background-color: rgb(170, 206, 155, 0.1);
@@ -208,7 +265,6 @@ h1 {
   margin-bottom: 50px;
 }
 /*Activities Section */
-
 
 .div-line {
   margin: 95px auto 95px auto;
@@ -265,10 +321,6 @@ h2 {
 #membership-only-classes {
   background-color: #EDEDED;
 }
-
-
-
-
 /*Memberships Section*/
 
 /* Main */
@@ -276,7 +328,14 @@ h2 {
 
 /* Footer */
 footer {
-  margin-left: 335px;
+  height: 180px;
+  margin-left: 463px;
 }
+
+#footer-social-media, #footer-info {
+  display: inline-block;
+} 
+
+
 
 /* Footer */
