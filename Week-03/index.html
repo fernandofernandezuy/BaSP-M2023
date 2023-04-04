@@ -18,7 +18,7 @@
     </header>
 
     <aside>
-      <section>
+      <navbar>
         <input type="search" class="search-input" placeholder="Search" />
         <ul>
           <li>
@@ -50,23 +50,25 @@
             <p class="aside-btn sidebar-link">Contact</p>
           </li>
         </ul>
-      </section>
 
-      <section class="aside-info">
-        <p>Information</p>
-        <ul>
-          <li>
-            <i class="fa-solid fa-envelope"></i> • information@untitled.tld
-          </li>
-          <li>
-            <i class="fa-solid fa-mobile-screen-button"></i> • (000) 000-0000
-          </li>
-          <li>
-            <i class="fa-solid fa-house"></i> • 1234 Somewhere Road
-            #8254Nashville, TN 00000-0000
-          </li>
-        </ul>
-      </section>
+        <section id="aside-info">
+          <p>Information</p>
+          <ul>
+            <li>
+              <i class="fa-solid fa-envelope"></i> • information@untitled.tld
+            </li>
+            <li>
+              <i class="fa-solid fa-mobile-screen-button"></i> • (000) 000-0000
+            </li>
+            <li>
+              <i class="fa-solid fa-house"></i> • 1234 Somewhere Road
+              #8254Nashville, TN 00000-0000
+            </li>
+          </ul>
+        </section>
+      </navbar>
+
+      
     </aside>
 
     <main>
@@ -201,7 +203,7 @@
 
       <section id="memberships-section">
         <h2>Gym Memberships</h2>
-        <h3 id="membership-black">Membership Black</h3>
+        <h3 id="membership-black" class="membership">Membership Black</h3>
         <ul>
           <li>Free access to Bodybuilding</li>
           <li>Free access to classes prior registration</li>
@@ -209,14 +211,14 @@
           <li>Grid display</li>
         </ul>
 
-        <h3>Membership Classic</h3>
+        <h3 id="membership-classic" class="membership">Membership Classic</h3>
         <ul>
           <li>Free access to the weight room</li>
           <li>Personalized monitoring by a coach</li>
           <li>Grid display</li>
         </ul>
 
-        <h3>Membership Only Classes</h3>
+        <h3 id="membership-only-classes" class="membership">Membership Only Classes</h3>
         <ul>
           <li>Personalized monitoring by a coach</li>
           <li>Grid display</li>
