@@ -285,6 +285,7 @@ h2 {
 
 #logo-radium {
   left: 1369px;
+  height: 95px;
   position: fixed;
 }
 
@@ -328,13 +329,23 @@ h2 {
 
 /* Footer */
 footer {
-  height: 180px;
+  padding-top: 180px;
   margin-left: 463px;
+  margin-bottom: 75px;
 }
 
 #footer-social-media, #footer-info {
   display: inline-block;
 } 
+
+.footer-logo {
+  text-decoration: none;
+  margin-right: 52px ;
+}
+
+.footer-info {
+  font-weight: 500;
+}
 
 
 
