@@ -53,10 +53,10 @@ aside {
 }
 
 .search-input::placeholder {
- padding-left: 16px;
- color: #ABA9A9;
- font-weight: 400;
- font-size: 14px;
+  padding-left: 16px;
+  color: #aba9a9;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 aside ul {
@@ -85,24 +85,23 @@ aside ul {
 .sidebar-link {
   display: inline-block;
   margin-bottom: 43px;
- 
 }
 
 #home-icon {
- margin-right: 8px;
+  margin-right: 8px;
 }
 
 #plus-icon {
-  margin-right: 13px;
- }
- 
- #sign-in-icon {
-  margin-right: 7px;
- }
+  margin-right: 14px;
+}
 
- #inbox-icon {
+#sign-in-icon {
+  margin-right: 7px;
+}
+
+#inbox-icon {
   margin-right: 11px;
- }
+}
 
 .aside-info {
   position: relative;
@@ -119,20 +118,18 @@ aside ul {
 }
 
 .aside-info ul li {
- padding-bottom: 20px;
- font-weight: 500;
-  
+  padding-bottom: 20px;
+  font-weight: 500;
 }
 
 /* Sidebar */
 
 /* Main */
-
+/* Welcome Section */
 main {
   margin-left: 335px;
   margin-top: 117.92px;
 }
-
 
 h1 {
   position: relative;
@@ -150,12 +147,12 @@ h1 {
 }
 
 #subtitle {
-font-weight: 700;
-font-size: 36px;
-line-height: 42px;
-text-align: center;
-color: #423C3C;
-margin-top: 18px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: #423c3c;
+  margin-top: 18px;
 }
 
 #welcome-text {
@@ -166,7 +163,85 @@ margin-top: 18px;
   margin: 14px 267px;
   margin-top: 14px;
 }
+/* Welcome Section */
 
+/* Info Section */
+#info-container {
+  margin-left: 184px;
+  margin-right: 245px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.info-article {
+  display: inline-block;
+  width: 35%;
+}
+
+.info-article p {
+  margin: 20px 0 20px 0;
+}
+
+.info-article-left {
+  margin-right: 206px;
+}
+/* Info Section */
+
+/* About Us Section */
+#about-us-section p {
+  background-color: rgb(170, 206, 155, 0.1);
+  font-size: 20px;
+  padding: 90px;
+  margin: 152px;
+}
+/* About Us Section */
+
+/*Activities Section */
+#activities-container {
+  text-align: left;
+}
+
+.activities {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+/*Activities Section */
+
+
+.div-line {
+  margin: 95px auto 95px auto;
+  width: 500px;
+  background-color: #BEBEBE;
+  height: 5px;
+  border-radius: 3px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 47px;
+  color: #373867;
+  margin-bottom: 96px;
+}
+
+#logo-radium {
+  left: 1369px;
+  position: fixed;
+}
+
+/*Memberships Section*/
+
+/*Memberships Section*/
+
+/* Main */
+
+
+/* Footer */
 footer {
   margin-left: 335px;
 }
+
+/* Footer */
