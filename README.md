@@ -7,7 +7,9 @@ Consists of creating a website for a Gym that facilitates the management of it, 
 
 ## Week 01
 
-In this week we work in team to built the differents screenflows to the website on Figma. I work in the team that design the screenflow for the Log-In and Sign-In 
+In this week we work in team to built the differents screenflows to the website on Figma. I work in the team that design the screenflow for the Log-In and Sign-In
+
+Figma of the website: https://www.figma.com/file/IGkIxih6STHxdBqnuGYTlR/BaSP-m2023-MegaRocket-Nico?node-id=41-4&t=21XkFL50vu0A0Sl3-0
 
 ## Week 02
 
