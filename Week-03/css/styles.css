@@ -5,6 +5,21 @@
   font-family: Roboto;
 }
 
+h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 47px;
+  color: #373867;
+  margin-bottom: 96px;
+}
+
+#logo-radium {
+  left: 1369px;
+  height: 125px;
+  position: fixed;
+}
+
 li {
   list-style: none;
 }
@@ -25,6 +40,7 @@ header {
   text-align: center;
   color: white;
   font-size: 40px;
+  font-weight: 700;
 }
 
 /* Header */
@@ -138,6 +154,7 @@ h1 {
   right: 148px;
   text-align: center;
   font-size: 48px;
+  font-weight: 700;
   color: #373867;
 }
 
@@ -227,6 +244,8 @@ form {
    width: 364px;
    height: 171px;
  }
+
+
  
  .btn {
    display: block;
@@ -274,20 +293,7 @@ form {
   border-radius: 3px;
 }
 
-h2 {
-  text-align: center;
-  font-weight: 700;
-  font-size: 35px;
-  line-height: 47px;
-  color: #373867;
-  margin-bottom: 96px;
-}
 
-#logo-radium {
-  left: 1369px;
-  height: 95px;
-  position: fixed;
-}
 
 /*Memberships Section*/
 #memberships-section {
@@ -346,7 +352,4 @@ footer {
 .footer-info {
   font-weight: 500;
 }
-
-
-
 /* Footer */
