@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Dancing+Script&family=Montserrat&family=PT+Serif&family=Poppins:wght@200;400&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  font-family: Roboto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 47px;
+  color: #373867;
+  margin-bottom: 96px;
+}
+
+#logo-radium {
+  left: 1369px;
+  height: 125px;
+  position: fixed;
+}
+
+li {
+  list-style: none;
+}
+
