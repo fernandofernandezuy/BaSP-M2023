@@ -235,4 +235,9 @@ footer {
   #footer-info {
     margin-left: 20%;
   }
+
+  #logo-radium {
+    display: block;
+  }
+
 }

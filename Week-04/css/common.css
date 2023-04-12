@@ -19,6 +19,7 @@ h2 {
 }
 
 #logo-radium {
+  display: none;
   top: 80%;
   left: 91%;
   height: 105px;
