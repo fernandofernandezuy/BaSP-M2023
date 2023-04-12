@@ -3,7 +3,7 @@
 ## Description
 
 What is this about? This is a project for the bootcamp "Become a Software Professional" of Radium Rocket.
-Consists of creating a website for a Gym that facilitates the management of it, we are going to 
+Consists of creating a website for a Gym that facilitates the management of it, we are going to buil it week to week adding the thecnologies learned in class.
 
 ## Week 01
 
@@ -15,15 +15,30 @@ Figma of the website: https://www.figma.com/file/IGkIxih6STHxdBqnuGYTlR/BaSP-m20
 
 In this week I work building the structure on HTML to the landing page of the gym.
 
-## Week 03
+### Week 03
 
 In this week I work giving styles with CSS to the HTML previously created in the last week. We couldn't use grid or flexbox and the sizes had to be in px.
+
+
+## Week 04
+
+In this week I work adapting the website to mobile and desktop with CSS, I use flex and media-queries.
+
+Separation of CSS files:
+- reset.css 
+- common.css
+- header.css
+- side-bar.css
+- content.css
 
 ## Technologies Used
 
 - HTML
 - CSS
 
+## CSS Folder
+
 ## Credits
 
 Thanks to Radium Rocket for give me the oportunity to be a part of this Bootcamp.
+Thanks to my teammates for all the hard work and help brind it.
