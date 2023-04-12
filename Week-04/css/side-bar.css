@@ -1,0 +1,90 @@
+/* Aside */
+
+aside {
+    margin-top: 10vh;
+    display: none;
+    width: 335px;
+    height: 100vh;
+    position: fixed;
+    background-color: #f6f6f6;
+    left: 0;
+    top: 0;
+  }
+  
+  .search-input {
+    width: 255px;
+    height: 36px;
+    left: 40px;
+    top: 16px;
+    border-radius: 4px;
+    border: none;
+    position: absolute;
+  }
+  
+  .search-input::placeholder {
+    padding-left: 16px;
+    color: #aba9a9;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  
+  aside ul {
+    margin-top: 68px;
+  }
+  
+  .aside-btn {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+    width: 238px;
+    height: 49px;
+    color: #2a2a32;
+    background-color: #aace9b;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+  
+  
+  .sidebar-icons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 43px;
+  }
+  
+  #home-icon {
+    margin-right: 8px;
+  }
+  
+  #plus-icon {
+    margin-right: 14px;
+  }
+  
+  #sign-in-icon {
+    margin-right: 7px;
+  }
+  
+  #inbox-icon {
+    margin-right: 11px;
+  }
+  
+  #aside-info {
+    position: relative;
+    top: 4.5vh;
+  }
+  
+  #aside-info p {
+    position: relative;
+    width: 109px;
+    height: 24px;
+    left: 103px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  #aside-info ul li {
+    padding-bottom: 20px;
+    font-weight: 500;
+  }
+  /* Aside */
