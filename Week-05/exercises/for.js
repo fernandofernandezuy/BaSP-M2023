@@ -25,9 +25,9 @@ console.log(musicalInstruments);
 guardando cada palabra dentro de la variable sentence. Al final mostrar una única alerta con la cadena completa. */
 
 console.log("-Exercise 5.c:");
-var sentence = '';
+var sentence = "";
 for (let i = 0; i < musicalInstruments.length; i++) {
-    var instrument = musicalInstruments[i];
-    sentence = sentence + instrument;
-  }
-  console.log(sentence)
+  var instrument = musicalInstruments[i];
+  sentence = sentence + instrument;
+}
+console.log(sentence);
