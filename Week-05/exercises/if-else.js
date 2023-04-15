@@ -5,7 +5,7 @@ console.log("--EXERCISE 4: IF ELSE");
 
 console.log("-Exercise 4.a:");
 let numRandom = Math.random();
-if (numRandom >= 1.5) {
+if (numRandom >= 0.5) {
   alert('Greater than or equal to 0,5')
 } else ( alert('Lower than 0,5'));
 console.log(numRandom);
