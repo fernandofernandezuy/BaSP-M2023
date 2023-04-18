@@ -3,7 +3,7 @@ console.log("--EXERCISE 3: ARRAYS");
 // a. Dado el siguiente array: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"] mostrar por consola los meses 5 y 11 (utilizar console.log).
 
 console.log("-Exercise 3.a:");
-let months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 console.log(months[4], months[10]);
 
 // b. Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).
@@ -41,6 +41,6 @@ console.log(months);
 // g. Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
 
 console.log('-Exercise 3.g:');
-let monthsCopy = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+var monthsCopy = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 monthsCopy = monthsCopy.slice(4, 11);
 console.log(monthsCopy);
