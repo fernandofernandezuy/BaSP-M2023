@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20%;
+  }
+  
+  #footer-social-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .footer-img {
+    width: 40px;
+    margin-right: 20px;
+  }
+  
+  #footer-info {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
