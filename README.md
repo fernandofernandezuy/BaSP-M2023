@@ -3,7 +3,7 @@
 ### Description
 
 What is this about? This is a project for the bootcamp "Become a Software Professional" of Radium Rocket.
-Consists of creating a website for a Gym that facilitates the management of it, we are going to buil it week to week adding the thecnologies learned in class.
+Consists of creating a website for a Gym that facilitates the management of it, we are going to buil it week to week adding the thecnologies learned it in class.
 
 ### Technologies Used
 
