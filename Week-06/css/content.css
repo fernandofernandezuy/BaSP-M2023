@@ -1,5 +1,7 @@
 /* Main */
-
+main {
+  margin-top: 13vh;
+}
 /* Welcome Section */
 h1 {
   color: #373867;

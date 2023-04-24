@@ -22,48 +22,48 @@
           <div class="signup-field">
             <label for="name">Name</label>
             <input class="input-form" type="text" id="name" name="name" />
-            <label for="name" class="hidden input-error">Invalid name</label>
+            <label for="name" class="hidden input-error" id="name-error">The name must contain at least 3 letters.</label>
           </div>
           <div class="signup-field">
             <label for="surname">Surname</label>
             <input class="input-form" type="text" id="surname" name="surname" />
-            <label for="surname" class="hidden input-error">Invalid surname</label>
+            <label for="surname" class="hidden input-error" id="surname-error">The surname must contain at least 3 letters.</label>
           </div>
 
           <div class="signup-field">
             <label for="dni">DNI</label>
             <input class="input-form" type="text" id="dni" name="dni" />
-            <label for="dni" class="hidden input-error">Invalid DNI</label>
+            <label for="dni" class="hidden input-error" id="dni-error">This DNI is not valid.</label>
           </div>
 
           <div class="signup-field">
             <label for="birthdate">Birth Date</label>
             <input
               class="input-form"
-              type="date"
-              id="birthdate"
+              type="text"
+              id="birth-date"
               name="birthdate"
             />
-            <label for="birthdate" class="hidden input-error">Invalid birthdate</label>
+            <label for="birthdate" class="hidden input-error" id="date-error">This date is not valid. The date format is dd/mm/yyyy</label>
           </div>
 
           <div class="signup-field">
             <label for="phone">Phone</label>
             <input class="input-form" type="tel" id="phone" name="phone" />
-            <label for="phone" class="hidden input-error"></label>
+            <label for="phone" class="hidden input-error" id="phone-error">Phone must have 10 numbers.</label>
           </div>
         </section>
         <section class="column">
           <div class="signup-field">
             <label for="address">Address</label>
             <input class="input-form" type="text" id="address" name="address" />
-            <label for="address" class="hidden input-error"></label>
+            <label for="address" class="hidden input-error " id="address-error">Address must contain numbers, letters and space in the middle.</label>
           </div>
 
           <div class="signup-field">
             <label for="town">Town</label>
             <input class="input-form" type="text" id="town" name="town" />
-            <label for="town" class="hidden input-error"></label>
+            <label for="town" class="hidden input-error" id="town-error">This town is not val</label>
           </div>
 
           <div class="signup-field">
@@ -72,15 +72,15 @@
               class="input-form"
               type="text"
               id="postalCode"
-              name="postalCode"
+              name="postal-code"
             />
-            <label for="postalCode" class="hidden input-error"></label>
+            <label for="postalCode" class="hidden input-error" id="postal-code-error"></label>
           </div>
 
           <div class="signup-field">
             <label for="email">Email</label>
             <input class="input-form" type="email" id="email" name="email" />
-            <label for="email" class="hidden input-error"></label>
+            <label for="email" class="hidden input-error" id="email-error">Email is invalid.</label>
           </div>
 
           <div class="signup-field">
@@ -91,7 +91,7 @@
               id="password"
               name="password"
             />
-            <label for="password" class="hidden input-error"></label>
+            <label for="password" class="hidden input-error" id="pass-error"></label>
           </div>
 
           <div class="signup-field" id="repeat-password">
@@ -99,10 +99,10 @@
             <input
               class="input-form"
               type="password"
-              id="repeatPassword"
+              id="repeat-password"
               name="repeatPassword"
             />
-            <label for="repeatPassword" class="hidden input-error"></label>
+            <label for="repeatPassword" class="hidden input-error" id="repeat-pass-error"></label>
           </div>
         </section>
         <button class="btn">Continue</button>

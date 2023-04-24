@@ -39,7 +39,8 @@ li {
 }
 
 .btn {
-  margin-top: 1%;
+  display: block;
+  margin: auto;
   font-size: 16px;
   font-weight: 700;
   line-height: 19px;
@@ -54,7 +55,7 @@ li {
 .label-error {
   color: red;
   margin-bottom: 2%;
-  font-size: 0.8rem;
+  
 }
 
 .hidden {
@@ -75,4 +76,5 @@ li {
 .input-error {
   border-color: red;
   color: red;
+  font-size: 0.8rem;
 }
