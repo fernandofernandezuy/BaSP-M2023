@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp Mega Rocket SA</title>
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/sign-up.css" />
+    <link rel="stylesheet" href="../css/footer.css">
+  </head>
+  <body>
+    <header>
+      <p class="headline">Mega Rocket SA</p>
+    </header>
+
+    <main>
+    <h2>Register</h2>
+      <form id="sign-up-form">
+        <section class="column">
+          <div class="signup-field">
+            <label for="name">Name</label>
+            <input class="input-form" type="text" id="name" name="name" />
+            <label for="name" class="hidden input-error">Invalid name</label>
+          </div>
+          <div class="signup-field">
+            <label for="surname">Surname</label>
+            <input class="input-form" type="text" id="surname" name="surname" />
+            <label for="surname" class="hidden input-error">Invalid surname</label>
+          </div>
+
+          <div class="signup-field">
+            <label for="dni">DNI</label>
+            <input class="input-form" type="text" id="dni" name="dni" />
+            <label for="dni" class="hidden input-error">Invalid DNI</label>
+          </div>
+
+          <div class="signup-field">
+            <label for="birthdate">Birth Date</label>
+            <input
+              class="input-form"
+              type="date"
+              id="birthdate"
+              name="birthdate"
+            />
+            <label for="birthdate" class="hidden input-error">Invalid birthdate</label>
+          </div>
+
+          <div class="signup-field">
+            <label for="phone">Phone</label>
+            <input class="input-form" type="tel" id="phone" name="phone" />
+            <label for="phone" class="hidden input-error"></label>
+          </div>
+        </section>
+        <section class="column">
+          <div class="signup-field">
+            <label for="address">Address</label>
+            <input class="input-form" type="text" id="address" name="address" />
+            <label for="address" class="hidden input-error"></label>
+          </div>
+
+          <div class="signup-field">
+            <label for="town">Town</label>
+            <input class="input-form" type="text" id="town" name="town" />
+            <label for="town" class="hidden input-error"></label>
+          </div>
+
+          <div class="signup-field">
+            <label for="postalCode">Postal Code</label>
+            <input
+              class="input-form"
+              type="text"
+              id="postalCode"
+              name="postalCode"
+            />
+            <label for="postalCode" class="hidden input-error"></label>
+          </div>
+
+          <div class="signup-field">
+            <label for="email">Email</label>
+            <input class="input-form" type="email" id="email" name="email" />
+            <label for="email" class="hidden input-error"></label>
+          </div>
+
+          <div class="signup-field">
+            <label for="password">Password</label>
+            <input
+              class="input-form"
+              type="password"
+              id="password"
+              name="password"
+            />
+            <label for="password" class="hidden input-error"></label>
+          </div>
+
+          <div class="signup-field" id="repeat-password">
+            <label for="repeatPassword">Repeat Password</label>
+            <input
+              class="input-form"
+              type="password"
+              id="repeatPassword"
+              name="repeatPassword"
+            />
+            <label for="repeatPassword" class="hidden input-error"></label>
+          </div>
+        </section>
+        <button class="btn">Continue</button>
+      </form>
+    </main>
+
+    <footer>
+        <div id="footer-social-media">
+            <div class="row">
+          <a class="footer-logo" href="">
+            <img
+              class="footer-img"
+              src="../../assets/img/footer1.png"
+              alt="Snapchat logo"
+            />
+          </a>
+          <a class="footer-logo" href="">
+            <img
+              class="footer-img"
+              src="../../assets/img/footer2.png"
+              alt="Whatsapp logo"
+            />
+          </a>
+          <a class="footer-logo" href="">
+            <img
+              class="footer-img"
+              src="../../assets/img/footer3.png"
+              alt="Facebook logo"
+            />
+          </a>
+        </div>
+        <div class="row">
+          <a class="footer-logo" href="">
+            <img
+              class="footer-img"
+              src="../../assets/img/footer4.png"
+              alt="Instagram logo"
+            />
+          </a>
+          <a class="footer-logo" href="">
+            <img
+              class="footer-img"
+              src="../../assets/img/footer5.png"
+              alt="Telegram logo"
+            />
+          </a>
+          <a class="footer-logo" href="">
+            <img
+              class="footer-img"
+              src="../../assets/img/footer6.png"
+              alt="LinkedIn logo"
+            />
+          </a>
+        </div>
+        </div>
+        <div id="footer-info">
+          <p>Rosario, Argentina</p>
+          <p>Copyright © 2022 Radium Rocket. All rights reserved.</p>
+        </div>
+      </footer>
+    <script src="../js/sign-up.js"></script>
+  </body>
+</html>
