@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Mega Rocket SA</title>
-    <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/common.css" />
   </head>
   <body>
     <header>
@@ -19,11 +19,13 @@
         <h2>Log In</h2>
         <img src="../../assets/img/LOGO-RR.png" alt="Logo of Radium Rocket" />
       </div>
-      <form id="login-form" action="POST">
-        <label for="email">Email</label>
+      <form id="login-form">
+        <label for="email" class="label-form">Email</label>
         <input type="text" name="email" id="email" class="input-form" />
-        <label for="password">Password</label>
-        <input type="text" name="password" id="password" class="input-form" />
+        <label for="email" class="hidden label-error" id="email-error-text">Email is incorrect</label>
+        <label for="password" class="label-form">Password</label>
+        <input type="password" name="password" id="password" class="input-form" />
+        <label for="password" class="hidden label-error" id="pass-error">Password is incorrect</label>
         <section id="form-section">
           <div>
             <input type="radio" name="remember-me" />
@@ -32,10 +34,11 @@
           <p><a href="">Forgot Password?</a></p>
         </section>
         <section>
-        <button type="submit" class="btn">Continue</button>
+        <button  id="login-btn" class="btn">Continue</button>
         <p id="login-question">Are you new here? <a href="./sign-up.html">Register</a></p>
        </section>
       </form>
     </main>
+    <script src="../js/login.js"></script>
   </body>
 </html>
