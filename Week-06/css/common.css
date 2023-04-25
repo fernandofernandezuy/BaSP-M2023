@@ -54,7 +54,6 @@ li {
 .label-error {
   color: red;
   margin-bottom: 2%;
-  
 }
 
 .hidden {
@@ -68,7 +67,7 @@ li {
 .input-form {
   margin-bottom: 1%;
   height: 2rem;
-  border: 1px solid #2A2A32;
+  border: 1px solid #2a2a32;
   border-radius: 4px;
 }
 
@@ -77,5 +76,3 @@ li {
   color: red;
   font-size: 0.8rem;
 }
-
-

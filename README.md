@@ -30,7 +30,7 @@ In this week I work giving styles with CSS to the HTML previously created in the
 
 In this week I work adapting the website to mobile and desktop with CSS, I use flex and media-queries.
 
- ### Separation of CSS files:
+### Separation of CSS files:
 - reset.css 
 - common.css
 - header.css
@@ -47,7 +47,16 @@ In this week we were doing exercises with JavaScript in a new index.html
 - Arrays
 - If Else
 - For
--Functions
+- Functions
+
+## [Week-06](https://shorturl.at/fFMPS)
+
+This week, my focus has been on implementing validation for login and sign up using JavaScript and the Document Object Model (DOM).
+
+### Separation of js files:
+- login.js
+- sign-up.js
+
 
 ## Credits
 

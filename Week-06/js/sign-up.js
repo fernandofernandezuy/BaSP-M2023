@@ -251,7 +251,7 @@ function validateLocality(locality) {
       number = true;
     } else if (locality.charAt(i) === " " && locality.indexOf("  ") === -1) {
       space = true;
-      contSpace++
+      contSpace++;
     } else {
       other = false;
     }

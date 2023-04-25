@@ -227,10 +227,10 @@ form {
   }
 
   #subtitle,
-#welcome-text,
-h1 {
-  font-size: 3rem;
-}
+  #welcome-text,
+  h1 {
+    font-size: 3rem;
+  }
 
   #subtitle {
     font-size: 1.4rem;
