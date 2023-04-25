@@ -19,6 +19,7 @@ h1 {
 h1 {
   text-align: center;
   margin: 4% 10%;
+  font-size: 1.2rem;
 }
 
 #subtitle {
@@ -224,6 +225,12 @@ form {
   .info-img {
     width: 14rem;
   }
+
+  #subtitle,
+#welcome-text,
+h1 {
+  font-size: 3rem;
+}
 
   #subtitle {
     font-size: 1.4rem;

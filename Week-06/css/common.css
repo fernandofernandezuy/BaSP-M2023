@@ -40,10 +40,9 @@ li {
 
 .btn {
   display: block;
-  margin: auto;
+  margin: 1% auto;
   font-size: 16px;
   font-weight: 700;
-  line-height: 19px;
   text-align: center;
   background-color: #aace9b;
   width: 109px;
@@ -78,3 +77,5 @@ li {
   color: red;
   font-size: 0.8rem;
 }
+
+
