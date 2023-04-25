@@ -11,22 +11,45 @@ function validateEmail(email) {
   return emailExpression.test(email);
 }
 
-function validatePassword(pass) {
-  var password = pass.value;
-  var letter = false;
-  var number = false;
+function isLetter(char) {
+  var ascii = char.toUpperCase().charCodeAt(0);
+  return ascii > 64 && ascii < 91; //Takes a character as a parameter and return true if the character is a letter.
+}
 
-  for (let i = 0; i < password.length; i++) {
-    if (isNaN(password.charAt(i))) {
+function hasLetter(string) {
+  var letter = false;
+  var contLetter = 0;
+
+  for (var i = 0; i < string.length; i++) {
+    if (isLetter(string.charAt(i))) {
       letter = true;
-    } else {
-      number = true;
+      contLetter++;
     }
   }
-  if (letter && number) {
-    return true;
-  }
+  return letter; //return true if the string has a letter.
 }
+
+function isAlphanumeric(string) {
+  var letter = false;
+  var number = false;
+  var other = true;
+
+  for (let i = 0; i < string.length; i++) {
+    if (isLetter(string.charAt(i))) {
+      letter = true;
+    } else if (hasNumber(string.charAt(i))) {
+      number = true;
+    } else {
+      other = false;
+    }
+  }
+  return letter && number && other;
+}
+
+function validatePassword(pass) {
+  return pass.length > 7 && isAlphanumeric(pass);
+}
+
 
 function showError(input, inputError) {
   input.classList.add("input-error");
@@ -38,7 +61,7 @@ function removeError(input, inputError) {
   inputError.classList.add("hidden");
 }
 
-// Blur events of the inputs, if the
+// Blur events of the inputs
 emailInput.addEventListener("blur", function () {
   if (!validateEmail(emailInput.value)) {
     showError(emailInput, emailError);
@@ -46,7 +69,7 @@ emailInput.addEventListener("blur", function () {
 });
 
 passwordInput.addEventListener("blur", function () {
-  if (!validatePassword(passwordInput)) {
+  if (!validatePassword(passwordInput.value)) {
     showError(passwordInput, passwordError);
   }
 });
@@ -57,7 +80,7 @@ emailInput.addEventListener("focus", function () {
   });
   
 passwordInput.addEventListener("focus", function () {
-  if (!validatePassword(passwordInput)) {
+  if (!validatePassword(passwordInput.value)) {
     removeError(passwordInput, passwordError);
   }
 });

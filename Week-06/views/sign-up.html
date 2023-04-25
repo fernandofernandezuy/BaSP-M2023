@@ -16,8 +16,10 @@
     </header>
 
     <main>
+      <a id="back" href="../views/index.html"><img src="../../assets/img/back.png.png" alt="Back Vector"></a>
     <h2>Register</h2>
       <form id="sign-up-form">
+        <div class="container">
         <section class="column">
           <div class="signup-field">
             <label for="name">Name</label>
@@ -37,14 +39,14 @@
           </div>
 
           <div class="signup-field">
-            <label for="birthdate">Birth Date</label>
+            <label for="birthdate">Birth Date (dd/mm/yyyy)</label>
             <input
               class="input-form"
               type="text"
               id="birth-date"
               name="birthdate"
             />
-            <label for="birthdate" class="hidden input-error" id="date-error">This date is not valid. The date format is dd/mm/yyyy</label>
+            <label for="birthdate" class="hidden input-error" id="date-error">This date is not valid.</label>
           </div>
 
           <div class="signup-field">
@@ -61,9 +63,9 @@
           </div>
 
           <div class="signup-field">
-            <label for="town">Town</label>
-            <input class="input-form" type="text" id="town" name="town" />
-            <label for="town" class="hidden input-error" id="town-error">This town is not val</label>
+            <label for="locality">Locality</label>
+            <input class="input-form" type="text" id="locality" name="locality" />
+            <label for="locality" class="hidden input-error" id="locality-error">This locality is invalid.</label>
           </div>
 
           <div class="signup-field">
@@ -71,10 +73,10 @@
             <input
               class="input-form"
               type="text"
-              id="postalCode"
+              id="postal-code"
               name="postal-code"
             />
-            <label for="postalCode" class="hidden input-error" id="postal-code-error"></label>
+            <label for="postalCode" class="hidden input-error" id="postal-code-error">Must have between 4 and 5 numbers</label>
           </div>
 
           <div class="signup-field">
@@ -91,27 +93,27 @@
               id="password"
               name="password"
             />
-            <label for="password" class="hidden input-error" id="pass-error"></label>
+            <label for="password" class="hidden input-error" id="pass-error">Password must have at least 8 characters, consisting of letters and numbers.</label>
           </div>
-
+        </div>
           <div class="signup-field" id="repeat-password">
             <label for="repeatPassword">Repeat Password</label>
             <input
               class="input-form"
               type="password"
-              id="repeat-password"
+              id="repeat-pass"
               name="repeatPassword"
             />
-            <label for="repeatPassword" class="hidden input-error" id="repeat-pass-error"></label>
-          </div>
+            <label for="repeatPassword" class="hidden input-error" id="repeat-pass-error">Password must have at least 8 characters, consisting of letters and numbers.</label>
+          
         </section>
-        <button class="btn">Continue</button>
+      </div>
+        <button class="btn" id="reg-btn">Continue</button>
       </form>
     </main>
 
     <footer>
-        <div id="footer-social-media">
-            <div class="row">
+        <div id="footer-social-media"> 
           <a class="footer-logo" href="">
             <img
               class="footer-img"
@@ -132,9 +134,7 @@
               src="../../assets/img/footer3.png"
               alt="Facebook logo"
             />
-          </a>
-        </div>
-        <div class="row">
+          </a>   
           <a class="footer-logo" href="">
             <img
               class="footer-img"
@@ -156,7 +156,6 @@
               alt="LinkedIn logo"
             />
           </a>
-        </div>
         </div>
         <div id="footer-info">
           <p>Rosario, Argentina</p>

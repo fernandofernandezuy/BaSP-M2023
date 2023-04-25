@@ -2,25 +2,38 @@
 var nameInput = document.getElementById("name");
 var nameError = document.getElementById("name-error");
 var surname = document.getElementById("surname");
-var surnameError = document.getElementById("surname-error")
+var surnameError = document.getElementById("surname-error");
 var dni = document.getElementById("dni");
-var dniError = document.getElementById("dni-error")
+var dniError = document.getElementById("dni-error");
 var birthDate = document.getElementById("birth-date");
-var dateError = document.getElementById("date-error")
+var dateError = document.getElementById("date-error");
 var phone = document.getElementById("phone");
 var phoneError = document.getElementById("phone-error");
 var address = document.getElementById("address");
 var addressError = document.getElementById("address-error");
-var town = document.getElementById("town");
-var townError = document.getElementById("town-error");
+var locality = document.getElementById("locality");
+var localityError = document.getElementById("locality-error");
 var postalCode = document.getElementById("postal-code");
 var postalCodeError = document.getElementById("postal-code-error");
 var email = document.getElementById("email");
 var emailError = document.getElementById("email-error");
 var pass = document.getElementById("password");
-var phoneError = document.getElementById("phone-error");
-var repeatPass = document.getElementById("repeat-password");
-var phoneError = document.getElementById("phone-error");
+var passError = document.getElementById("pass-error");
+var repeatPass = document.getElementById("repeat-pass");
+var repeatPassError = document.getElementById("repeat-pass-error");
+var inputs = [
+  nameInput,
+  surname,
+  dni,
+  birthDate,
+  phone,
+  address,
+  locality,
+  postalCode,
+  email,
+  pass,
+  repeatPass,
+];
 
 function isLetter(char) {
   var ascii = char.toUpperCase().charCodeAt(0);
@@ -29,13 +42,26 @@ function isLetter(char) {
 
 function hasLetter(string) {
   var letter = false;
+  var contLetter = 0;
 
   for (var i = 0; i < string.length; i++) {
     if (isLetter(string.charAt(i))) {
       letter = true;
+      contLetter++;
     }
   }
   return letter; //return true if the string has a letter.
+}
+
+function contLetter(string) {
+  var letters = 0;
+
+  for (var i = 0; i < string.length; i++) {
+    if (isLetter(string.charAt(i))) {
+      letters++;
+    }
+  }
+  return letters; //return number of letters of a string
 }
 
 function onlyLetters(string) {
@@ -51,7 +77,6 @@ function onlyLetters(string) {
   }
   return letter && nal; //return true if the string has only letters.
 }
-
 
 function hasNumber(string) {
   var number = false;
@@ -95,9 +120,33 @@ function isAlphanumeric(string) {
   return letter && number && other;
 }
 
+function lettersAndSpace(string) {
+  var letter = false;
+  var other = true;
+
+  for (let i = 0; i < string.length; i++) {
+    if (isLetter(string.charAt(i))) {
+      letter = true;
+    } else if (string.charCodeAt(i) === 32 && string.indexOf("  ") === -1) {
+      other = true;
+    } else {
+      other = false;
+    }
+  }
+  return letter && other;
+}
+
 //Functions for validations
 function validateName(name) {
-  return onlyLetters(name) && name.length > 2;
+  if (name.trim() == name) {
+    return onlyLetters(name) && name.length > 2;
+  }
+}
+
+function validateSurname(surname) {
+  if (surname.trim() == surname) {
+    return lettersAndSpace(surname) && contLetter(surname) > 2;
+  }
 }
 
 function validateDni(dni) {
@@ -163,24 +212,56 @@ function validateAddress(address) {
     var space = false;
     var other = true;
 
-    
     for (let i = 0; i < address.length; i++) {
       if (isLetter(address.charAt(i))) {
         letter = true;
-      } else if (address.charCodeAt(i) >= 48 && address.charCodeAt(i) <= 57) {
+      } else if (
+        hasNumber(address.charAt(i)) &&
+        !hasLetter(address.charAt(i - 1)) &&
+        !hasLetter(address.charAt(i + 1))
+      ) {
         number = true;
       } else if (address.charCodeAt(i) === 32) {
-        space = true
+        space = true;
       } else {
-        other = false
+        other = false;
       }
-    } 
+    }
     return letter && number && space && other;
   }
-};
+}
 
-function validateTown(town) {
-  return town.length > 3 && isAlphanumeric(town);
+function validateLocality(locality) {
+  var letter = false;
+  var contLetter = 0;
+  var number = false;
+  var space = false;
+  var contSpace = 0;
+  var other = true;
+
+  for (let i = 0; i < locality.length; i++) {
+    if (isLetter(locality.charAt(i))) {
+      letter = true;
+      contLetter++;
+    } else if (
+      hasNumber(locality.charAt(i)) &&
+      !hasLetter(locality.charAt(i - 1)) &&
+      !hasLetter(locality.charAt(i + 1))
+    ) {
+      number = true;
+    } else if (locality.charAt(i) === " " && locality.indexOf("  ") === -1) {
+      space = true;
+      contSpace++
+    } else {
+      other = false;
+    }
+  }
+
+  if (contLetter >= 3 && contSpace == 1) {
+    return letter && number && space && other;
+  } else {
+    return false;
+  }
 }
 
 function validatePostalCode(postalCode) {
@@ -222,7 +303,7 @@ nameInput.addEventListener("focus", function () {
 
 //Surame validation
 surname.addEventListener("blur", function () {
-  if (!validateName(surname.value)) {
+  if (!validateSurname(surname.value)) {
     showError(surname, surnameError);
   }
 });
@@ -264,7 +345,7 @@ phone.addEventListener("focus", function () {
   removeError(phone, phoneError);
 });
 
-//Addres validation
+//Address validation
 address.addEventListener("blur", function () {
   if (!validateAddress(address.value)) {
     showError(address, addressError);
@@ -273,6 +354,50 @@ address.addEventListener("blur", function () {
 
 address.addEventListener("focus", function () {
   removeError(address, addressError);
+});
+
+//locality validation
+locality.addEventListener("blur", function () {
+  if (!validateLocality(locality.value)) {
+    showError(locality, localityError);
+  }
+});
+
+locality.addEventListener("focus", function () {
+  removeError(locality, localityError);
+});
+
+//Postal code validation
+postalCode.addEventListener("blur", function () {
+  if (!validatePostalCode(postalCode.value)) {
+    showError(postalCode, postalCodeError);
+  }
+});
+
+postalCode.addEventListener("focus", function () {
+  removeError(postalCode, postalCodeError);
+});
+
+//Passwords validation
+pass.addEventListener("blur", function () {
+  if (!validatePassword(pass.value)) {
+    showError(pass, passError);
+  }
+});
+
+pass.addEventListener("focus", function () {
+  removeError(pass, passError);
+});
+
+//Repeat pass validation
+repeatPass.addEventListener("blur", function () {
+  if (!validatePassword(repeatPass.value)) {
+    showError(repeatPass, repeatPassError);
+  }
+});
+
+repeatPass.addEventListener("focus", function () {
+  removeError(repeatPass, repeatPassError);
 });
 
 //Email validation
@@ -284,4 +409,54 @@ email.addEventListener("blur", function () {
 
 email.addEventListener("focus", function () {
   removeError(email, emailError);
+});
+
+//Click on register button
+document.getElementById("reg-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+  if (
+    validateName(nameInput.value) &&
+    validateSurname(surname.value) &&
+    validateDni(dni.value) &&
+    validateBirthDate(birthDate.value) &&
+    validatePhone(phone.value) &&
+    validateAddress(address.value) &&
+    validateLocality(locality.value) &&
+    validatePostalCode(postalCode.value) &&
+    validateEmail(email.value) &&
+    validatePassword(pass.value) &&
+    validatePassword(repeatPass.value)
+  ) {
+    alert(
+      " Name: " +
+        nameInput.value +
+        "\n Surname: " +
+        surname.value +
+        "\n DNI: " +
+        dni.value +
+        "\n Birthdate: " +
+        birthDate.value +
+        "\n Phone: " +
+        phone.value +
+        "\n Address: " +
+        address.value +
+        "\n Locality: " +
+        locality.value +
+        "\n Postal Code: " +
+        postalCode.value +
+        "\n Email: " +
+        email.value +
+        "\n Password: " +
+        password.value
+    );
+  } else {
+    alert("Error. Please check the fields.");
+    for (let i = 0; i < inputs.length; i++) {
+      var input = inputs[i];
+
+      if (input.value === "") {
+        input.classList.add("input-error");
+      }
+    }
+  }
 });
