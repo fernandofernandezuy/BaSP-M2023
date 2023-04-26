@@ -29,27 +29,30 @@ function hasLetter(string) {
   return letter; //return true if the string has a letter.
 }
 
-function isAlphanumeric(string) {
-  var letter = false;
+function hasNumber(string) {
   var number = false;
-  var other = true;
 
   for (let i = 0; i < string.length; i++) {
-    if (isLetter(string.charAt(i))) {
-      letter = true;
-    } else if (hasNumber(string.charAt(i))) {
+    if (string.charCodeAt(i) >= 48 && string.charCodeAt(i) <= 57) {
       number = true;
-    } else {
-      other = false;
     }
   }
-  return letter && number && other;
+  return number;
 }
 
 function validatePassword(pass) {
-  return pass.length > 7 && isAlphanumeric(pass);
-}
+  var isValid = false;
 
+  if (pass.length > 7 && hasNumber(pass) && hasLetter(pass)) {
+    for (let i = 0; i < pass.length; i++) {
+      if (hasLetter(pass.charAt(i)) || hasNumber(pass.charAt(i))) {
+        isValid = true;
+      } else {
+        isValid = false;
+      }
+    }
+  } return isValid;
+}
 
 function showError(input, inputError) {
   input.classList.add("input-error");
@@ -76,9 +79,9 @@ passwordInput.addEventListener("blur", function () {
 
 // Focus events of the inputs.
 emailInput.addEventListener("focus", function () {
-    removeError(emailInput, emailError);
-  });
-  
+  removeError(emailInput, emailError);
+});
+
 passwordInput.addEventListener("focus", function () {
   if (!validatePassword(passwordInput.value)) {
     removeError(passwordInput, passwordError);
@@ -87,10 +90,12 @@ passwordInput.addEventListener("focus", function () {
 
 // Click event of the login button.
 document.getElementById("login-btn").addEventListener("click", function (e) {
-    e.preventDefault();
-    if (validateEmail(emailInput.value) && validatePassword(passwordInput)) {
-        alert(" Email: " + emailInput.value + "\n Password: " + passwordInput.value);
-    } else {
-        alert("Error, Please check the fields.")
-    }
+  e.preventDefault();
+  if (validateEmail(emailInput.value) && validatePassword(passwordInput)) {
+    alert(
+      " Email: " + emailInput.value + "\n Password: " + passwordInput.value
+    );
+  } else {
+    alert("Error, Please check the fields.");
+  }
 });

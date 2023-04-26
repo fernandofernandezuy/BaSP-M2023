@@ -276,7 +276,18 @@ function validateEmail(email) {
 }
 
 function validatePassword(pass) {
-  return pass.length > 7 && isAlphanumeric(pass);
+  var isValid = false;
+
+  if (pass.length > 7 && hasNumber(pass) && hasLetter(pass)) {
+    for (let i = 0; i < pass.length; i++) {
+      if (hasLetter(pass.charAt(i)) || hasNumber(pass.charAt(i))) {
+        isValid = true;
+      } else {
+        isValid = false;
+      }
+    }
+  }
+  return isValid;
 }
 
 //Functions that show or remove errors in the HTML.
@@ -415,6 +426,14 @@ email.addEventListener("focus", function () {
 document.getElementById("reg-btn").addEventListener("click", function (e) {
   e.preventDefault();
   if (
+    validatePassword(pass.value) &&
+    validatePassword(repeatPass.value) &&
+    repeatPass.value !== pass.value
+  ) {
+    alert("Error. Passwords doesn't match");
+    pass.classList.add("input-error");
+    repeatPass.classList.add("input-error");
+  } else if (
     validateName(nameInput.value) &&
     validateSurname(surname.value) &&
     validateDni(dni.value) &&
@@ -423,9 +442,7 @@ document.getElementById("reg-btn").addEventListener("click", function (e) {
     validateAddress(address.value) &&
     validateLocality(locality.value) &&
     validatePostalCode(postalCode.value) &&
-    validateEmail(email.value) &&
-    validatePassword(pass.value) &&
-    validatePassword(repeatPass.value)
+    validateEmail(email.value)
   ) {
     alert(
       " Name: " +
