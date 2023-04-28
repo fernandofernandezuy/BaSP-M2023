@@ -1,4 +1,5 @@
 // Variable Declarations
+var URL = "https://api-rest-server.vercel.app/login";
 var emailInput = document.getElementById("email");
 var emailError = document.getElementById("email-error-text");
 var passwordInput = document.getElementById("password");
@@ -51,7 +52,8 @@ function validatePassword(pass) {
         isValid = false;
       }
     }
-  } return isValid;
+  }
+  return isValid;
 }
 
 function showError(input, inputError) {
@@ -91,10 +93,22 @@ passwordInput.addEventListener("focus", function () {
 // Click event of the login button.
 document.getElementById("login-btn").addEventListener("click", function (e) {
   e.preventDefault();
-  if (validateEmail(emailInput.value) && validatePassword(passwordInput)) {
-    alert(
-      " Email: " + emailInput.value + "\n Password: " + passwordInput.value
-    );
+  if (
+    validateEmail(emailInput.value) &&
+    validatePassword(passwordInput.value)
+  ) {
+    fetch(
+      URL + "?email=" + emailInput.value + "&password=" + passwordInput.value
+    )
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        alert(data.msg);
+      })
+      .catch(function (error) {
+        alert(data.msg);
+      });
   } else {
     alert("Error, Please check the fields.");
   }
