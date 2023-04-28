@@ -1,0 +1,78 @@
+@import url("https://shorturl.at/anAW1");
+
+* {
+  margin: 0;
+  font-family: Roboto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 47px;
+  color: #373867;
+  margin-bottom: 2%;
+}
+
+#logo-radium {
+  display: none;
+  top: 80%;
+  left: 91%;
+  height: 105px;
+  position: fixed;
+}
+
+li {
+  list-style: none;
+}
+
+.div-line {
+  margin: 50px auto 50px auto;
+  width: 70%;
+  background-color: #bebebe;
+  height: 5px;
+  border-radius: 3px;
+}
+
+.btn {
+  display: block;
+  margin: 1% auto;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #aace9b;
+  width: 109px;
+  height: 33px;
+  border: none;
+  border-radius: 5px;
+}
+
+.label-error {
+  color: red;
+  margin-bottom: 2%;
+}
+
+.hidden {
+  display: none;
+}
+
+.label-form {
+  margin-top: 5%;
+}
+
+.input-form {
+  margin-bottom: 1%;
+  height: 2rem;
+  border: 1px solid #2a2a32;
+  border-radius: 4px;
+}
+
+.input-error {
+  border-color: red;
+  color: red;
+  font-size: 0.8rem;
+}
