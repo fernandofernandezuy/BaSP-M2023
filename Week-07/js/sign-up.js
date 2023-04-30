@@ -1,4 +1,6 @@
 //Variables declaration
+var URL = "https://api-rest-server.vercel.app/signup/";
+var info = [];
 var nameInput = document.getElementById("name");
 var nameError = document.getElementById("name-error");
 var surname = document.getElementById("surname");
@@ -422,6 +424,14 @@ email.addEventListener("focus", function () {
   removeError(email, emailError);
 });
 
+function mensaje(array) {
+  var mensaje = "";
+  for (var i = 0; i < array.length; i++) {
+    mensaje += array[i] + "\n";
+  }
+  return mensaje;
+}
+
 //Click on register button
 document.getElementById("reg-btn").addEventListener("click", function (e) {
   e.preventDefault();
@@ -444,28 +454,58 @@ document.getElementById("reg-btn").addEventListener("click", function (e) {
     validatePostalCode(postalCode.value) &&
     validateEmail(email.value)
   ) {
-    alert(
-      " Name: " +
+    fetch(
+      URL +
+        "?name=" +
         nameInput.value +
-        "\n Surname: " +
+        "&lastName=" +
         surname.value +
-        "\n DNI: " +
+        "&dni=" +
         dni.value +
-        "\n Birthdate: " +
+        "&dob=" +
         birthDate.value +
-        "\n Phone: " +
+        "&phone=" +
         phone.value +
-        "\n Address: " +
+        "&address=" +
         address.value +
-        "\n Locality: " +
+        "&city=" +
         locality.value +
-        "\n Postal Code: " +
+        "&zip=" +
         postalCode.value +
-        "\n Email: " +
+        "&email=" +
         email.value +
-        "\n Password: " +
-        password.value
-    );
+        "&password=" +
+        pass.value
+    )
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        info.push(data);
+        var isValid = true;
+
+        for (let i = 0; i < info.length; i++) {
+          isValid = info[i].success;
+          var mensaje = "";
+          for (const key in info[i].data) {
+            mensaje += key + ": ";
+            mensaje += info[i].data[key] + "\n";
+          }
+        }
+        if (isValid) {
+          alert(mensaje);
+        } else {
+          for (let i = 0; i < info.length; i++) {
+            var errorMsg = "";
+            for (const key in info[i].errors) {
+              errorMsg += info[i].errors[key].msg + "\n";
+            }
+          }
+        alert(errorMsg)}
+      })
+      .catch(function (error) {
+        throw error;
+      });
   } else {
     alert("Error. Please check the fields.");
     for (let i = 0; i < inputs.length; i++) {
