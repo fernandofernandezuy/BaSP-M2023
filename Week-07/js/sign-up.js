@@ -1,4 +1,3 @@
-//Variables declaration
 var URL = "https://api-rest-server.vercel.app/signup/";
 var info = [];
 var nameInput = document.getElementById("name");
@@ -39,20 +38,18 @@ var inputs = [
 
 function isLetter(char) {
   var ascii = char.toUpperCase().charCodeAt(0);
-  return ascii > 64 && ascii < 91; //Takes a character as a parameter and return true if the character is a letter.
+  return ascii > 64 && ascii < 91;
 }
 
 function hasLetter(string) {
   var letter = false;
-  var contLetter = 0;
 
   for (var i = 0; i < string.length; i++) {
     if (isLetter(string.charAt(i))) {
       letter = true;
-      contLetter++;
     }
   }
-  return letter; //return true if the string has a letter.
+  return letter;
 }
 
 function contLetter(string) {
@@ -63,7 +60,7 @@ function contLetter(string) {
       letters++;
     }
   }
-  return letters; //return number of letters of a string
+  return letters;
 }
 
 function onlyLetters(string) {
@@ -77,7 +74,7 @@ function onlyLetters(string) {
       nal = false;
     }
   }
-  return letter && nal; //return true if the string has only letters.
+  return letter && nal;
 }
 
 function hasNumber(string) {
@@ -102,7 +99,7 @@ function onlyNumbers(string) {
       nan = false;
     }
   }
-  return num && nan; //return true if the string has only numbers.
+  return num && nan;
 }
 
 function isAlphanumeric(string) {
@@ -138,7 +135,6 @@ function lettersAndSpace(string) {
   return letter && other;
 }
 
-//Functions for validations
 function validateName(name) {
   if (name.trim() == name) {
     return onlyLetters(name) && name.length > 2;
@@ -199,7 +195,7 @@ function validateBirthDate(birthDate) {
     var month = birthDate.substring(3, 5);
     var year = birthDate.substring(6, 10);
 
-    return validateDay(day) && validateMonth(month) && validateYear(year); // Return true if the paramater recibed is type date mm/dd/yyyy
+    return validateDay(day) && validateMonth(month) && validateYear(year);
   }
 }
 
@@ -274,7 +270,7 @@ function validatePostalCode(postalCode) {
 
 function validateEmail(email) {
   var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-  return emailExpression.test(email); //return true if the email has a valid format.
+  return emailExpression.test(email);
 }
 
 function validatePassword(pass) {
@@ -292,7 +288,6 @@ function validatePassword(pass) {
   return isValid;
 }
 
-//Functions that show or remove errors in the HTML.
 function showError(input, inputError) {
   input.classList.add("input-error");
   inputError.classList.remove("hidden");
@@ -303,7 +298,6 @@ function removeError(input, inputError) {
   inputError.classList.add("hidden");
 }
 
-//Name validation
 nameInput.addEventListener("blur", function () {
   if (!validateName(nameInput.value)) {
     showError(nameInput, nameError);
@@ -314,7 +308,6 @@ nameInput.addEventListener("focus", function () {
   removeError(nameInput, nameError);
 });
 
-//Surame validation
 surname.addEventListener("blur", function () {
   if (!validateSurname(surname.value)) {
     showError(surname, surnameError);
@@ -325,7 +318,6 @@ surname.addEventListener("focus", function () {
   removeError(surname, surnameError);
 });
 
-//DNI validation
 dni.addEventListener("blur", function () {
   if (!validateDni(dni.value)) {
     showError(dni, dniError);
@@ -336,7 +328,6 @@ dni.addEventListener("focus", function () {
   removeError(dni, dniError);
 });
 
-//Birth date validation
 birthDate.addEventListener("blur", function () {
   if (!validateBirthDate(birthDate.value)) {
     showError(birthDate, dateError);
@@ -347,7 +338,6 @@ birthDate.addEventListener("focus", function () {
   removeError(birthDate, dateError);
 });
 
-//Phone validation
 phone.addEventListener("blur", function () {
   if (!validatePhone(phone.value)) {
     showError(phone, phoneError);
@@ -358,7 +348,6 @@ phone.addEventListener("focus", function () {
   removeError(phone, phoneError);
 });
 
-//Address validation
 address.addEventListener("blur", function () {
   if (!validateAddress(address.value)) {
     showError(address, addressError);
@@ -369,7 +358,6 @@ address.addEventListener("focus", function () {
   removeError(address, addressError);
 });
 
-//locality validation
 locality.addEventListener("blur", function () {
   if (!validateLocality(locality.value)) {
     showError(locality, localityError);
@@ -380,7 +368,6 @@ locality.addEventListener("focus", function () {
   removeError(locality, localityError);
 });
 
-//Postal code validation
 postalCode.addEventListener("blur", function () {
   if (!validatePostalCode(postalCode.value)) {
     showError(postalCode, postalCodeError);
@@ -391,7 +378,6 @@ postalCode.addEventListener("focus", function () {
   removeError(postalCode, postalCodeError);
 });
 
-//Passwords validation
 pass.addEventListener("blur", function () {
   if (!validatePassword(pass.value)) {
     showError(pass, passError);
@@ -402,7 +388,6 @@ pass.addEventListener("focus", function () {
   removeError(pass, passError);
 });
 
-//Repeat pass validation
 repeatPass.addEventListener("blur", function () {
   if (!validatePassword(repeatPass.value)) {
     showError(repeatPass, repeatPassError);
@@ -413,7 +398,6 @@ repeatPass.addEventListener("focus", function () {
   removeError(repeatPass, repeatPassError);
 });
 
-//Email validation
 email.addEventListener("blur", function () {
   if (!validateEmail(email.value)) {
     showError(email, emailError);
@@ -432,7 +416,18 @@ function mensaje(array) {
   return mensaje;
 }
 
-//Click on register button
+nameInput.value = localStorage.getItem("name");
+surname.value = localStorage.getItem("lastName");
+address.value = localStorage.getItem("address");
+dni.value = localStorage.getItem("dni");
+pass.value = localStorage.getItem("password");
+repeatPass.value = localStorage.getItem("password");
+email.value = localStorage.getItem("email");
+locality.value = localStorage.getItem("city");
+postalCode.value = localStorage.getItem("zip");
+phone.value = localStorage.getItem("phone");
+birthDate.value = localStorage.getItem("dob");
+
 document.getElementById("reg-btn").addEventListener("click", function (e) {
   e.preventDefault();
   if (
@@ -484,27 +479,33 @@ document.getElementById("reg-btn").addEventListener("click", function (e) {
         info.push(data);
         var isValid = true;
 
-        for (let i = 0; i < info.length; i++) {
+        for (var i = 0; i < info.length; i++) {
           isValid = info[i].success;
-          var mensaje = "";
-          for (const key in info[i].data) {
-            mensaje += key + ": ";
-            mensaje += info[i].data[key] + "\n";
+          var message = "";
+          for (var key in info[i].data) {
+            message += key + ": ";
+            message += info[i].data[key] + "\n";
           }
         }
         if (isValid) {
-          alert(mensaje);
+          alert(message);
+          for (var i = 0; i < info.length; i++) {
+            for (var key in info[i].data) {
+              localStorage.setItem(key, info[i].data[key]);
+            }
+          }
         } else {
-          for (let i = 0; i < info.length; i++) {
+          for (var i = 0; i < info.length; i++) {
             var errorMsg = "";
             for (const key in info[i].errors) {
               errorMsg += info[i].errors[key].msg + "\n";
             }
           }
-        alert(errorMsg)}
+          alert(errorMsg);
+        }
       })
-      .catch(function (error) {
-        throw error;
+      .catch(function (err) {
+        console.log(err);
       });
   } else {
     alert("Error. Please check the fields.");
