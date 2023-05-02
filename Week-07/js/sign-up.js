@@ -212,6 +212,12 @@ function validateBirthDate(birthDate) {
   }
 }
 
+function changeDateFormat(date) {
+  let parts = date.split("/");
+  let newDate = parts[1] + "/" + parts[0] + "/" + parts[2];
+  return newDate;
+}
+
 function validatePhone(phone) {
   return onlyNumbers(phone) && phone.length === 10;
 }
@@ -439,7 +445,7 @@ email.value = localStorage.getItem("email");
 locality.value = localStorage.getItem("city");
 postalCode.value = localStorage.getItem("zip");
 phone.value = localStorage.getItem("phone");
-birthDate.value = localStorage.getItem("dob");
+birthDate.value = changeDateFormat(localStorage.getItem("dob"));
 
 document.getElementById("reg-btn").addEventListener("click", function (e) {
   e.preventDefault();
@@ -471,7 +477,7 @@ document.getElementById("reg-btn").addEventListener("click", function (e) {
         "&dni=" +
         dni.value +
         "&dob=" +
-        birthDate.value +
+        changeDateFormat(birthDate.value) +
         "&phone=" +
         phone.value +
         "&address=" +
