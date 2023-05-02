@@ -1,4 +1,3 @@
-// Variable Declarations
 var URL = "https://api-rest-server.vercel.app/login";
 var emailInput = document.getElementById("email");
 var emailError = document.getElementById("email-error-text");
@@ -6,7 +5,6 @@ var passwordInput = document.getElementById("password");
 var passwordError = document.getElementById("pass-error");
 var loginBtn = document.getElementById("login-btn");
 
-// Functions Declarations
 function validateEmail(email) {
   const emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
   return emailExpression.test(email);
@@ -14,20 +12,18 @@ function validateEmail(email) {
 
 function isLetter(char) {
   var ascii = char.toUpperCase().charCodeAt(0);
-  return ascii > 64 && ascii < 91; //Takes a character as a parameter and return true if the character is a letter.
+  return ascii > 64 && ascii < 91;
 }
 
 function hasLetter(string) {
   var letter = false;
-  var contLetter = 0;
 
   for (var i = 0; i < string.length; i++) {
     if (isLetter(string.charAt(i))) {
       letter = true;
-      contLetter++;
     }
   }
-  return letter; //return true if the string has a letter.
+  return letter;
 }
 
 function hasNumber(string) {
@@ -66,7 +62,6 @@ function removeError(input, inputError) {
   inputError.classList.add("hidden");
 }
 
-// Blur events of the inputs
 emailInput.addEventListener("blur", function () {
   if (!validateEmail(emailInput.value)) {
     showError(emailInput, emailError);
@@ -79,7 +74,6 @@ passwordInput.addEventListener("blur", function () {
   }
 });
 
-// Focus events of the inputs.
 emailInput.addEventListener("focus", function () {
   removeError(emailInput, emailError);
 });
@@ -90,7 +84,6 @@ passwordInput.addEventListener("focus", function () {
   }
 });
 
-// Click event of the login button.
 document.getElementById("login-btn").addEventListener("click", function (e) {
   e.preventDefault();
   if (
@@ -106,8 +99,8 @@ document.getElementById("login-btn").addEventListener("click", function (e) {
       .then(function (data) {
         alert(data.msg);
       })
-      .catch(function (error) {
-        alert(data.msg);
+      .catch(function (err) {
+        alert(err);
       });
   } else {
     alert("Error, Please check the fields.");

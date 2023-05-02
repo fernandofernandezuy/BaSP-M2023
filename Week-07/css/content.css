@@ -223,13 +223,13 @@ form {
 
 @media only screen and (min-width: 1000px) {
   .info-img {
-    width: 14rem;
+    width: 10rem;
   }
 
   #subtitle,
   #welcome-text,
   h1 {
-    font-size: 3rem;
+    font-size: 1rem;
   }
 
   #subtitle {

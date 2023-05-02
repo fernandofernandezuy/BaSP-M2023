@@ -35,6 +35,19 @@ var inputs = [
   pass,
   repeatPass,
 ];
+var inputsErrors = [
+  nameError,
+  surnameError,
+  dniError,
+  dateError,
+  phoneError,
+  addressError,
+  localityError,
+  postalCodeError,
+  emailError,
+  passError,
+  repeatPassError,
+];
 
 function isLetter(char) {
   var ascii = char.toUpperCase().charCodeAt(0);
@@ -505,7 +518,7 @@ document.getElementById("reg-btn").addEventListener("click", function (e) {
         }
       })
       .catch(function (err) {
-        console.log(err);
+        alert("Error: Route");
       });
   } else {
     alert("Error. Please check the fields.");
@@ -514,6 +527,7 @@ document.getElementById("reg-btn").addEventListener("click", function (e) {
 
       if (input.value === "") {
         input.classList.add("input-error");
+        inputsErrors[i].classList.remove("hidden");
       }
     }
   }
