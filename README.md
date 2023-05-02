@@ -3,7 +3,8 @@
 ### Description
 
 What is this about? This is a project for the bootcamp "Become a Software Professional" of Radium Rocket.
-Consists of creating a website for a Gym that facilitates the management of it, we are going to buil it week to week adding the thecnologies learned it in class.
+Consists of creating a website for a Gym that facilitates the management of it, we are going to built it week to week adding the thecnologies learned it in classes.
+The bootcamp has a duration of 15 weeks in each week we get to work on a new project using agile methodologies. This allows me to gain practical experience in agile project management, while collaborating with my team to plan, execute, and deliver each project. We have to response to a daily stand-up bot and the posibility to have 3 meetings: planning, demo and retrospective to help us continuously improve our processes and outcomes.
 
 ### Technologies Used
 
@@ -17,7 +18,7 @@ In this week we work in team to built the differents screenflows to the website 
 
 [Figma of the website](https://shorturl.at/rZ246)
 
-## [Week-02](https://shorturl.at/yAFGQ) 
+## [Week-02](https://shorturl.at/yAFGQ)
 
 In this week I work building the structure on HTML to the landing page of the gym.
 
@@ -57,8 +58,11 @@ This week, my focus has been on implementing validation for login and sign up us
 - login.js
 - sign-up.js
 
+## [Week-07](https://shorturl.at/fFMPS)
+
+In this week we learned about asynchronism in js, i work validating the sign up and login through an API using fetch().
 
 ## Credits
 
 - Thanks to Radium Rocket for give me the oportunity to be a part of this Bootcamp.
-- Thanks to my teammates for all the hard work and help brind it.
+- Thanks to my teammates and tutors for all the hard work and help brind it.
