@@ -497,22 +497,18 @@ document.getElementById("reg-btn").addEventListener("click", function (e) {
       .then(function (data) {
         info.push(data);
         var isValid = true;
-
+        
         for (var i = 0; i < info.length; i++) {
           isValid = info[i].success;
           var message = "";
           for (var key in info[i].data) {
             message += key + ": ";
             message += info[i].data[key] + "\n";
+            localStorage.setItem(key, info[i].data[key])
           }
         }
         if (isValid) {
           alert(message);
-          for (var i = 0; i < info.length; i++) {
-            for (var key in info[i].data) {
-              localStorage.setItem(key, info[i].data[key]);
-            }
-          }
         } else {
           for (var i = 0; i < info.length; i++) {
             var errorMsg = "";

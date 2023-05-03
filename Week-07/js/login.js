@@ -100,7 +100,7 @@ document.getElementById("login-btn").addEventListener("click", function (e) {
         alert(data.msg);
       })
       .catch(function (err) {
-        alert(err);
+        alert("error");
       });
   } else {
     alert("Error, Please check the fields.");
