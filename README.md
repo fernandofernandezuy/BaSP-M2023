@@ -5,6 +5,7 @@
 What is this about? This is a project for the "Become a Software Professional" bootcamp offered by Radium Rocket. The goal is to create a website for a gym that streamlines its management. We will build it week by week, incorporating the technologies we learn in class.
 
 The bootcamp lasts 15 weeks, and each week we work using Scrum. This allows us to gain practical experience in agile project management. We have meetings (planning, demo, and retrospective) and a daily stand-up bot that we must update with our progress or any issues we encounter.
+In this repository are only the first seven weeks, the others weeks we work on other repositories in team.
 
 ### Technologies Used
 
